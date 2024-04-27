@@ -29,9 +29,7 @@ const AboutPage: React.FC = () => {
                 <AirplaneTicketSharpIcon sx={{ fontSize: 80, color: "gold" }} />
               </Avatar>
               <Typography variant="h4" component="h1" gutterBottom>
-                <StarBorder color="white" />
                 &emsp;About Us&emsp;
-                <StarBorder color="white" />
               </Typography>
               <Typography variant="body1" gutterBottom>
                 We are a team of passionate developers dedicated to creating the
@@ -42,7 +40,6 @@ const AboutPage: React.FC = () => {
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
                 <IconButton
-                  color="white"
                   component="a"
                   href="https://github.com/matanew1"
                   target="_blank"
@@ -51,7 +48,6 @@ const AboutPage: React.FC = () => {
                   <GitHub />
                 </IconButton>
                 <IconButton
-                  color="white"
                   component="a"
                   href="https://www.linkedin.com/in/matan-bardugo-a2949b216/"
                   target="_blank"

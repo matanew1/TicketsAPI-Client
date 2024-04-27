@@ -54,7 +54,6 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
                         step={1}
                         min={0}
                         max={300}
-                        color="warning"
                         defaultValue={price}
                         onChange={handleSliderChange}
                     />

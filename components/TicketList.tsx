@@ -72,7 +72,6 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
                 <TableCell sx={{ padding: 2 }}>
                   <IconButton
                     aria-label="delete"
-                    color="error"
                     onClick={() => {
                       deleteTicket(ticket.id);
                       router.push("/tickets");
