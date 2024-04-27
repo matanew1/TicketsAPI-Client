@@ -7,14 +7,20 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "axios": "^1.6.8",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.3"
   },
   "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "typescript": "^4.8.3"
+    "@types/node": "^12.20.55",
+    "@types/react": "^17.0.80",
+    "@types/react-dom": "^17.0.25",
+    "typescript": "^4.9.5"
   }
 }

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-raleway: Raleway;
+  --font-poppins: Poppins;
+  --font-pacifico: Pacifico;
+
+  /* font sizes */
+  --font-size-xs: 12px;
+  --font-size-8xl-7: 27.7px;
+  --font-size-sm-9: 13.9px;
+  --font-size-21xl: 40px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-9xl-4: 28.4px;
+  --font-size-5xl: 24px;
+  --font-size-13xl: 32px;
+  --font-size-3xs: 10px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-whitesmoke: #f2f5f9;
+  --color-black: #000;
+  --color-aliceblue-100: #f2f7fc;
+  --color-aliceblue-200: #ebf2fa;
+  --color-aliceblue-300: #e1e8ef;
+  --color-gray-100: #f8fbfb;
+  --color-gray-200: #1a1003;
+  --color-gray-300: #0b0909;
+  --color-gray-400: rgba(0, 0, 0, 0.85);
+  --color-gray-500: rgba(11, 9, 9, 0.5);
+  --color-gray-600: rgba(26, 16, 3, 0.5);
+  --color-bisque: #ffe3bf;
+  --color-antiquewhite: #ffeed9;
+  --color-white: #fff;
+  --color-lightgray: rgba(205, 205, 205, 0.5);
+  --color-papayawhip: #ffebd1;
+  --color-gainsboro-100: #e3e3e3;
+  --color-gainsboro-200: #d9d9d9;
+  --color-slategray: #57657a;
+  --color-tomato: #fa5252;
+  --color-oldlace: #fff4e5;
+  --color-silver: #b5b5b5;
+  --color-orange: #ff9c1b;
+  --color-red: #ec1b09;
+
+  /* Gaps */
+  --gap-3xs: 10px;
+  --gap-21xl: 40px;
+  --gap-11xs: 2px;
+  --gap-5xs: 8px;
+  --gap-3xs-2: 9.2px;
+  --gap-141xl: 160px;
+  --gap-13xl: 32px;
+  --gap-xs: 12px;
+  --gap-3xs-1: 9.1px;
+  --gap-smi: 13px;
+  --gap-2xs: 11px;
+  --gap-base: 16px;
+  --gap-lgi: 19px;
+  --gap-9xs: 4px;
+
+  /* Paddings */
+  --padding-9xs: 4px;
+  --padding-5xs: 8px;
+  --padding-3xs-2: 9.2px;
+  --padding-3xs: 10px;
+  --padding-xl: 20px;
+  --padding-8xs: 5px;
+  --padding-11xs: 2px;
+  --padding-12xs: 1px;
+  --padding-7xs: 6px;
+  --padding-xl-7: 20.7px;
+  --padding-5xl-8: 24.8px;
+  --padding-11xs-7: 1.7px;
+  --padding-9xs-3: 3.3px;
+  --padding-10xs-5: 2.5px;
+  --padding-25xl: 44px;
+  --padding-11xl: 30px;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-5xs: 8px;
+  --br-3xs-3: 9.3px;
+  --br-4xs-3: 8.3px;
+  --br-8xs: 5px;
+  --br-31xl: 50px;
+  --br-3xs: 10px;
+}
