@@ -11,6 +11,7 @@ interface TicketProps {
 }
 
 export const getStaticProps: GetStaticProps<TicketProps> = async () => {
+  console.log("Fetching tickets");
   const tickets = await fetchTickets();
   return {
     props: {

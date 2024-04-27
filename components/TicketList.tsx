@@ -73,7 +73,7 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
                   <IconButton
                     aria-label="delete"
                     onClick={() => {
-                      deleteTicket(ticket.id);
+                      deleteTicket(ticket.id.toString());
                       router.push("/tickets");
                     }}
                   >

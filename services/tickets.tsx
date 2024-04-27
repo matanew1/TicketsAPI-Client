@@ -27,7 +27,7 @@ export const createTicket = async (
   }
 };
 
-export const deleteTicket = async (id: number): Promise<void> => {
+export const deleteTicket = async (id: string): Promise<void> => {
   try {
     await axios.delete(`http://localhost:4000/tickets/${id}`);
   } catch (error) {
