@@ -214,7 +214,9 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
                         <TableCell sx={{ padding: 3 }}>
                           <IconButton
                             aria-label="delete"
+                            style={{ cursor: 'pointer' }} // Add this line
                             onClick={(event) => {
+                              event.preventDefault(); // Prevent the default action
                               event.stopPropagation(); // Stop the click event from propagating to the row
                               deleteTicket(ticket.id.toString());
                               router.push("/tickets");
