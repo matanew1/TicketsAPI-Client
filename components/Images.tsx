@@ -19,7 +19,7 @@ const Images: React.FC<ImagesProps> = ({ images }) => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "70vh" }}
+      style={{ minHeight: "70vh"}}
     >
       <Grid
         container
@@ -28,13 +28,13 @@ const Images: React.FC<ImagesProps> = ({ images }) => {
         justifyContent="center"
       >
         <Grid item style={{ textAlign: "center" }}>
-          <Typography variant="h2">Tickets API</Typography>
+          <Typography variant="h4">Tickets API</Typography>
         </Grid>
         <Grid
           item
           display="flex"
           overflow="auto"
-          height="70vh"
+          height="60vh"
           margin="auto"
           padding="2rem"
           sx={{

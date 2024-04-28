@@ -47,7 +47,7 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
         justifyContent="center"
         sx={{ 
           overflowY: "auto", 
-          height: "85vh",
+          height: { xs: "70vh", sm: "80vh", md: "85vh", lg: "85vh" },
           '&::-webkit-scrollbar': {
             width: '9px',
             borderRadius: '85px',
@@ -73,7 +73,7 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
           md={8}
           style={{ textAlign: "center", marginTop: 50, marginBottom: 20 }}
         >
-          <Typography variant="h5" color="white">
+          <Typography variant="h5" color="black">
             Add a new ticket
           </Typography>
         </Grid>
@@ -155,7 +155,6 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
                 handleDateChange(newValue);
               }}
               minDate={dayjs().startOf("day")}
-              renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
         </Grid>

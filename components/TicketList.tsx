@@ -80,8 +80,8 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
           marginBottom: "30px",
         }}
       >
-        <Grid container justifyContent="center" gap={2}>
-          <Grid item xs={10.5} md={10} lg={5}>
+        <Grid container justifyContent="center" gap={1}>
+          <Grid item xs={11} md={10} lg={5}>
             <Card
               sx={{
                 borderRadius: "10px",
@@ -103,7 +103,7 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={10.5} md={10} lg={4}>
+          <Grid item xs={11} md={10} lg={4}>
             <Card
               sx={{
                 borderRadius: "10px",
@@ -147,7 +147,7 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
             >
               <Box
                 sx={{
-                  maxHeight: "40vh",
+                  maxHeight: { xs: "25vh", lg: "50vh", md: "40vh", sm: "40vh" },
                   overflow: "auto",
                   "&::-webkit-scrollbar": {
                     width: "10px",
@@ -164,7 +164,7 @@ const TicketList: React.FC<TicketProps> = ({ tickets }) => {
                   },
                 }}
               >
-                <Table sx={{ minWidth: 650 }} stickyHeader>
+                <Table sx={{ minWidth: 500 }} stickyHeader>
                   <TableHead sx={{ backgroundColor: "#f5f5f5" }}>
                     <TableRow>
                       <TableCell sx={{ fontWeight: "bold", padding: 2 }}>

@@ -13,8 +13,10 @@ import {
 } from "@mui/material";
 import AirplaneTicketSharpIcon from "@mui/icons-material/AirplaneTicketSharp";
 import MenuIcon from "@mui/icons-material/Menu";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 
-const Header: React.FC = () => {
+const Header: React.FC = ({ handleThemeChange, darkMode }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -79,7 +81,7 @@ const Header: React.FC = () => {
         item
         container
         sx={{
-          marginLeft: "20px",
+          marginLeft: "30px",
           marginRight: "20px",
           display: "flex",
           alignItems: "center",
@@ -91,15 +93,14 @@ const Header: React.FC = () => {
             <AirplaneTicketSharpIcon
               sx={{
                 fontSize: "50px", // Adjust this value as needed
-                color: "gold",
-                boxShadow: "0 0 10px gold, 0 0 5px gold",
+                color: "black",
+                boxShadow: "0 0 10px black, 0 0 5px black",
               }}
             />
             <Typography
               variant="h4"
               sx={{
                 marginLeft: "20px",
-                fontFamily: "Cursive, sans-serif", // Adjust this value as needed
                 fontWeight: "bold",
                 color: "transparent",
                 background: "linear-gradient(to right, #FFD700, #FFA500)",
@@ -192,7 +193,17 @@ const Header: React.FC = () => {
         </Hidden>
       </Grid>
 
-      <Grid item marginLeft="auto" padding="15px">
+      <Grid item marginLeft="5px" padding="10px">
+        <IconButton
+          color="inherit"
+          aria-label="toggle dark mode"
+          onClick={handleThemeChange} // Add this line
+        >
+          {darkMode ? <BrightnessHighIcon /> : <Brightness4Icon />}
+        </IconButton>
+      </Grid>
+
+      <Grid item marginLeft="1px" padding="10px">
         <Hidden mdUp>
           <IconButton
             color="inherit"
