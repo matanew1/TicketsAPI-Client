@@ -9,13 +9,13 @@ const Layout: React.FC = ({ children }) => {
     <Box
       sx={{
         background: "linear-gradient(to right bottom, #430089, #82ffa1)",
-        margin: 0, // Add this line
-        padding: 0, // Add this line
-        position: "absolute", // Add this line
-        top: 0, // Add this line
-        left: 0, // Add this line
-        width: "100%", // Add this line
-        height: "100%", // Add this line
+        margin: 0,
+        padding: 0,
+        position: "fixed", // Change this line
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
       }}
     >
       <Header />

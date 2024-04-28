@@ -16,6 +16,7 @@ export const createTicket = async (
   ticket: TicketFormFields
 ): Promise<Ticket> => {
   try {
+    console.log(ticket);
     const response = await axios.post<Ticket>(
       "http://localhost:4000/tickets",
       ticket
