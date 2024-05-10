@@ -4,7 +4,7 @@ import { TicketFormFields } from "../interfaces/Ticket";
 
 export const fetchTickets = async (): Promise<Ticket[]> => {
   try {
-    const response = await axios.get<Ticket[]>("http://localhost:4000/tickets");
+    const response = await axios.get<Ticket[]>("https://tickets-api-server.vercel.app/tickets");
     return response.data;
   } catch (error) {
     console.error("Error fetching tickets:", error);
@@ -18,7 +18,7 @@ export const createTicket = async (
   try {
     console.log(ticket);
     const response = await axios.post<Ticket>(
-      "http://localhost:4000/tickets",
+      "https://tickets-api-server.vercel.app/tickets",
       ticket
     );
     return response.data;
@@ -30,7 +30,7 @@ export const createTicket = async (
 
 export const deleteTicket = async (id: string): Promise<void> => {
   try {
-    await axios.delete(`http://localhost:4000/tickets/${id}`);
+    await axios.delete(`https://tickets-api-server.vercel.app/tickets/${id}`);
   } catch (error) {
     console.error("Error deleting ticket:", error);
   }

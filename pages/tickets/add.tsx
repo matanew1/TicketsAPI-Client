@@ -15,7 +15,11 @@ const AddTicketPage: React.FC = () => {
     const { title, description, price } = data;
     try {
       const ticket = await createTicket(data);
-      router.push("/tickets"); // Redirect to the home page
+      if (!ticket) {
+        throw new Error("Ticket not created");
+      } else {
+        router.push("/tickets"); // Redirect to the home page
+      }
     } catch (error) {
       console.error("Error creating ticket:", error);
     }

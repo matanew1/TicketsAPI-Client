@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { GetServerSideProps } from "next/link";
+import GetServerSideProps from "next/link";
 import PaidIcon from "@mui/icons-material/Paid";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import AirplaneTicketIcon from "@mui/icons-material/AirplaneTicket";
@@ -14,7 +14,7 @@ import {
   Divider,
 } from "@mui/material";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
-import { Ticket } from "../interfaces/ticket";
+import { Ticket } from "../interfaces/Ticket";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import PayPalIcon from "@mui/icons-material/Payment";
 import IconButton from "@mui/material/IconButton";
@@ -84,12 +84,12 @@ const TicketDetail: NextPage<TicketDetailsProps> = ({ ticket }) => {
           <Divider style={{ margin: "20px 0" }} />
           <CardActions>
             <Grid container alignItems="center">
-              <Grid item lg={3} md={3} sm={3} xs={3} xxs={3}>
+              <Grid item lg={3} md={3} sm={3} xs={3}>
                 <Typography variant="h6" style={{ marginRight: "10px" }}>
                   Buy with:
                 </Typography>
               </Grid>
-              <Grid item lg={3} md={3} sm={3} xs={3} xxs={3}>
+              <Grid item lg={3} md={3} sm={3} xs={3}>
                 <IconButton
                   color="primary"
                   onClick={handleCreditCardPayment}

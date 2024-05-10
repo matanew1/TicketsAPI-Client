@@ -7,8 +7,19 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { useSelector, useDispatch } from 'react-redux';
 import { toggle } from '../store/darkModeSlice';
 
-const Layout: React.FC = ({ children }) => {
-  const darkMode = useSelector((state) => state.darkMode.value); // Get the darkMode value from the store
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+type RootState = {
+  darkMode: {
+    value: boolean;
+  };
+};
+
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const darkMode = useSelector((state: RootState) => state.darkMode.value); // Get the darkMode value from the store
   const dispatch = useDispatch();  // Get the dispatch function from the store
 
   const theme = createTheme({

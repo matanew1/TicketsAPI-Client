@@ -20,6 +20,7 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
   const [selectedDate, setSelectedDate] = useState(dayjs());
   const [charCountDes, setCharCountDes] = useState(0);
   const [charCountTi, setCharCountTi] = useState(0);
+  const { required, ...priceProps } = register("price");
 
   const handleSliderChange = (event: any, newValue: number | number[]) => {
     setValue("price", newValue as number);
@@ -45,24 +46,24 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
         container
         item
         justifyContent="center"
-        sx={{ 
-          overflowY: "auto", 
+        sx={{
+          overflowY: "auto",
           height: { xs: "70vh", sm: "80vh", md: "85vh", lg: "85vh" },
-          '&::-webkit-scrollbar': {
-            width: '9px',
-            borderRadius: '85px',
+          "&::-webkit-scrollbar": {
+            width: "9px",
+            borderRadius: "85px",
           },
-          '&::-webkit-scrollbar-track': {
-            background: '#f1f1f1',
-            borderRadius: '85px',
-            margin: '10px',
+          "&::-webkit-scrollbar-track": {
+            background: "#f1f1f1",
+            borderRadius: "85px",
+            margin: "10px",
           },
-          '&::-webkit-scrollbar-thumb': {
-            background: '#808',
-            borderRadius: '5px',
+          "&::-webkit-scrollbar-thumb": {
+            background: "#808",
+            borderRadius: "5px",
           },
-          '&::-webkit-scrollbar-thumb:hover': {
-            background: '#555',
+          "&::-webkit-scrollbar-thumb:hover": {
+            background: "#555",
           },
         }}
       >
@@ -78,7 +79,7 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
           </Typography>
         </Grid>
         <Grid item xs={8} sm={8} md={8}>
-        <Typography variant="caption">
+          <Typography variant="caption">
             {70 - charCountTi} characters remaining
           </Typography>
           <TextField
@@ -119,14 +120,13 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
         </Grid>
         <Grid item xs={8} sm={8} md={8}>
           <Slider
-            {...register("price")}
+            {...priceProps}
             aria-labelledby="price-slider"
             step={1}
             min={0}
             max={300}
             defaultValue={price}
             onChange={handleSliderChange}
-            required
           />
         </Grid>
         <Grid item xs={8} sm={8} md={8}>
@@ -164,7 +164,13 @@ const TicketForm: React.FC<TicketFormProps> = ({ onSubmit }) => {
             variant="contained"
             color="primary"
             fullWidth
-            disabled={selectedDate === null || price === 0 || amount === 0 || charCountTi > 70 || charCountDes > 255}
+            disabled={
+              selectedDate === null ||
+              price === 0 ||
+              amount === 0 ||
+              charCountTi > 70 ||
+              charCountDes > 255
+            }
           >
             Add Ticket
           </Button>

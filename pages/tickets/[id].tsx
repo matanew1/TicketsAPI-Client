@@ -8,10 +8,12 @@ import Layout from "../../components/Layout"; // Import the Layout component
 
 interface TicketDetailsProps {
   ticket: {
-    id: string;
+    id: number;
     title: string;
     description: string;
     price: number;
+    amount: number;
+    date: string;
   };
 }
 

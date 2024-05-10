@@ -16,7 +16,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 
-const Header: React.FC = ({ handleThemeChange, darkMode }) => {
+type HeaderProps = {
+  handleThemeChange: () => void;
+  darkMode: boolean;
+};
+
+const Header: React.FC<HeaderProps> = ({ handleThemeChange, darkMode }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
